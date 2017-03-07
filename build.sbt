@@ -24,5 +24,3 @@ npmDependencies in Compile ++=
 organization := "io.taig"
 
 scalaVersion := "2.12.1"
-
-webpackConfigFile := Some(baseDirectory.value / "webpack.config.js")

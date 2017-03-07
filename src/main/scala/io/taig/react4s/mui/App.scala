@@ -12,6 +12,6 @@ object App extends JSApp {
 
         val theme = ThemeProvider( Component( MyComponent ) )
 
-        new ReactBridge( React, ReactDOM ).renderToDomById( theme, "main" )
+        NpmReactBridge.renderToDomById( theme, "main" )
     }
 }
