@@ -8,7 +8,7 @@ crossScalaVersions :=
 resolvers += Resolver.sonatypeRepo( "snapshots" )
 
 libraryDependencies ++=
-    "com.github.ahnfelt" %%% "react4s" % "0.4-SNAPSHOT" ::
+    "com.github.ahnfelt" %%% "react4s" % "0.5-SNAPSHOT" ::
     Nil
 
 name := "react4s-mui"
