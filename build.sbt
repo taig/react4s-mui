@@ -18,7 +18,6 @@ npmDependencies in Compile ++=
     "react" -> "15.4.2" ::
     "react-dom" -> "15.4.2" ::
     "react-tap-event-plugin" -> "2.0.1" ::
-    "expose-loader" -> "0.7.1" ::
     Nil
 
 organization := "io.taig"
