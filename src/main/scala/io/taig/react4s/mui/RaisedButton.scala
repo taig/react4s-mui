@@ -7,6 +7,8 @@ import scala.scalajs.js
 
 object RaisedButton {
     def apply(
+        key:             Option[String]      = None,
+        ref:             Option[Any ⇒ Unit]  = None,
         backgroundColor: js.UndefOr[String]  = js.undefined,
         buttonStyle:     js.UndefOr[Css]     = js.undefined,
         className:       js.UndefOr[String]  = js.undefined,
@@ -25,6 +27,6 @@ object RaisedButton {
             "style" → style
         )
 
-        DynamicComponent( Mui.RaisedButton, props, children )
+        DynamicComponent( Mui.RaisedButton, props, children, key, ref )
     }
 }

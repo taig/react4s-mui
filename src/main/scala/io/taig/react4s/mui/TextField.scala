@@ -7,6 +7,8 @@ import scala.scalajs.js
 
 object TextField {
     def apply(
+        key:                      Option[String]                                     = None,
+        ref:                      Option[Any ⇒ Unit]                                 = None,
         className:                js.UndefOr[String]                                 = js.undefined,
         defaultValue:             js.UndefOr[String]                                 = js.undefined,
         disabled:                 js.UndefOr[Boolean]                                = js.undefined,
@@ -16,6 +18,7 @@ object TextField {
         floatingLabelFocusStyle:  js.UndefOr[Css]                                    = js.undefined,
         floatingLabelShrinkStyle: js.UndefOr[Css]                                    = js.undefined,
         floatingLabelStyle:       js.UndefOr[Css]                                    = js.undefined,
+        floatingLabelText:        js.UndefOr[String]                                 = js.undefined,
         fullWidth:                js.UndefOr[Boolean]                                = js.undefined,
         hintStyle:                js.UndefOr[Css]                                    = js.undefined,
         hintText:                 js.UndefOr[String]                                 = js.undefined,
@@ -25,7 +28,15 @@ object TextField {
         name:                     js.UndefOr[String]                                 = js.undefined,
         onChange:                 js.UndefOr[js.Function2[TouchEvent, String, Unit]] = js.undefined,
         rows:                     js.UndefOr[Int]                                    = js.undefined,
-        rowsMax:                  js.UndefOr[Int]                                    = js.undefined
+        rowsMax:                  js.UndefOr[Int]                                    = js.undefined,
+        style:                    js.UndefOr[Css]                                    = js.undefined,
+        textareaStyle:            js.UndefOr[Css]                                    = js.undefined,
+        `type`:                   js.UndefOr[String]                                 = js.undefined,
+        underlineDisabledStyle:   js.UndefOr[Css]                                    = js.undefined,
+        underlineFocusStyle:      js.UndefOr[Css]                                    = js.undefined,
+        underlineShow:            js.UndefOr[Boolean]                                = js.undefined,
+        underlineStyle:           js.UndefOr[Css]                                    = js.undefined,
+        value:                    js.UndefOr[String]                                 = js.undefined
     )( children: Tag* ): DynamicComponent = {
         val props = js.Dictionary(
             "className" → className,
@@ -36,6 +47,7 @@ object TextField {
             "floatingLabelFixed" → floatingLabelFixed,
             "floatingLabelShrinkStyle" → floatingLabelShrinkStyle,
             "floatingLabelStyle" → floatingLabelStyle,
+            "floatingLabelText" → floatingLabelText,
             "fullWidth" → fullWidth,
             "hintStyle" → hintStyle,
             "hintText" → hintText,
@@ -45,9 +57,17 @@ object TextField {
             "name" → name,
             "onChange" → onChange,
             "rows" → rows,
-            "rowsMax" → rowsMax
+            "rowsMax" → rowsMax,
+            "style" → style,
+            "textareaStyle" → textareaStyle,
+            "type" → `type`,
+            "underlineDisabledStyle" → underlineDisabledStyle,
+            "underlineFocusStyle" → underlineFocusStyle,
+            "underlineShow" → underlineShow,
+            "underlineStyle" → underlineStyle,
+            "value" → value
         )
 
-        DynamicComponent( Mui.TextField, props, children )
+        DynamicComponent( Mui.TextField, props, children, key, ref )
     }
 }
