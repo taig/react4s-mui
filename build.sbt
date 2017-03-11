@@ -24,4 +24,16 @@ organization := "io.taig"
 
 enableReloadWorkflow := true
 
+scalacOptions ++=
+    "-deprecation" ::
+    "-encoding" :: "UTF-8" ::
+    "-feature" ::
+    "-unchecked" ::
+    "-Xlint" ::
+    "-Yno-adapted-args" ::
+    "-Ywarn-numeric-widen" ::
+    "-Ywarn-value-discard" ::
+    "-Ywarn-unused-import" ::
+    Nil
+
 scalaVersion := "2.12.1"

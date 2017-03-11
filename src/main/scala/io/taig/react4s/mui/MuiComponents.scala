@@ -1,7 +1,7 @@
 package io.taig.react4s.mui
 
 import com.github.ahnfelt.react4s.JsComponent
-import io.taig.react4s.mui.facade.{Mui, MuiThemeProvider}
+import io.taig.react4s.mui.facade.{ Mui, MuiThemeProvider }
 
 trait MuiComponents {
     object AppBar extends JsComponent( Mui.AppBar )
