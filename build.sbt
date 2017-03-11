@@ -8,7 +8,7 @@ crossScalaVersions :=
 resolvers += Resolver.sonatypeRepo( "snapshots" )
 
 libraryDependencies ++=
-    "com.github.ahnfelt" %%% "react4s" % "0.6-SNAPSHOT" ::
+    "com.github.ahnfelt" %%% "react4s" % "0.6.1-SNAPSHOT" ::
     Nil
 
 name := "react4s-mui"
@@ -21,5 +21,7 @@ npmDependencies in Compile ++=
     Nil
 
 organization := "io.taig"
+
+enableReloadWorkflow := true
 
 scalaVersion := "2.12.1"

@@ -7,18 +7,19 @@ import scala.scalajs.js
 case class MyComponent() extends Component[NoEmit] {
     override def render(): ElementOrComponent = {
         val chip = Chip(
-            P( "onTouchTap", { e ⇒ println( "yolo click: " + e.target ) }: js.Function1[TouchEvent, Unit] ),
-            P( "labelStyle", js.Dictionary( "textTransform" → "uppercase" ) )
+            J( "onTouchTap", ( e: TouchEvent ) ⇒ println( "I clicked: " + e.target ) ),
+            J( "labelStyle", js.Dictionary( "textTransform" → "uppercase" ) )
         )
         val button = RaisedButton(
-            P( "label", "Yolo" ),
-            P( "primary", true ),
+            J( "label", "Hello World" ),
+            J( "primary", true ),
             S.margin.px( 12 )
         )
         val input = TextField(
-            P( "hintText", "Hint Text" ),
+            J( "hintText", "Hint Text" ),
             S.color( "red" )
         )
-        E.div( chip, button, input )
+        val avatar = Avatar( Text( "A" ) )
+        E.div( chip, button, input, avatar )
     }
 }
