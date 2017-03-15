@@ -8,13 +8,13 @@ crossScalaVersions :=
 resolvers += Resolver.sonatypeRepo( "snapshots" )
 
 libraryDependencies ++=
-    "com.github.ahnfelt" %%% "react4s" % "0.6.1-SNAPSHOT" ::
+    "com.github.ahnfelt" %%% "react4s" % "0.6.2-SNAPSHOT" ::
     Nil
 
 name := "react4s-mui"
 
 npmDependencies in Compile ++=
-    "material-ui" -> "0.17.0" ::
+    "material-ui" -> "0.17.1" ::
     "react" -> "15.4.2" ::
     "react-dom" -> "15.4.2" ::
     "react-tap-event-plugin" -> "2.0.1" ::

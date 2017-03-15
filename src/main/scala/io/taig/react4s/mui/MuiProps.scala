@@ -1,6 +1,6 @@
 package io.taig.react4s.mui
 
-import com.github.ahnfelt.react4s.J
+import com.github.ahnfelt.react4s.{ ElementOrComponent, J }
 import com.github.ahnfelt.react4s
 
 trait MuiProps {
@@ -16,7 +16,7 @@ trait MuiProps {
 
     def FloatingLabelText( value: String ) = J( "floatingLabelText", value )
 
-    def Icon( value: String ) = J( "icon", value )
+    def Icon( value: ElementOrComponent ) = J( "icon", value )
 
     def HintText( value: String ) = J( "hintText", value )
 
