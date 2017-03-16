@@ -6,6 +6,11 @@ import scala.scalajs.js
 
 case class MyComponent() extends Component[NoEmit] {
     override def render(): ElementOrComponent = {
+        val appBar = AppBar(
+            Title( Text( "Title" ) ),
+            J( "iconClassNameRight", "muidocs-icon-navigation-expand-more" )
+        )
+
         val chip = Chip(
             OnTouchTap( e ⇒ println( "I clicked: " + e.target ) ),
             J( "labelStyle", js.Dictionary( "textTransform" → "uppercase" ) )
@@ -23,6 +28,6 @@ case class MyComponent() extends Component[NoEmit] {
             Size( 60 ),
             Text( "A" )
         )
-        E.div( chip, button, input, avatar )
+        E.div( appBar, E.br(), chip, E.br(), button, E.br(), input, E.br(), avatar )
     }
 }

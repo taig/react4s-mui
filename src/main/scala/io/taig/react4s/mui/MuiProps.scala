@@ -1,6 +1,6 @@
 package io.taig.react4s.mui
 
-import com.github.ahnfelt.react4s.{ ElementOrComponent, J }
+import com.github.ahnfelt.react4s.{ ElementOrComponent, J, Node }
 import com.github.ahnfelt.react4s
 
 trait MuiProps {
@@ -30,5 +30,5 @@ trait MuiProps {
 
     def Style( values: react4s.Style* ) = J( "style", values: _* )
 
-    def Title( value: String ) = J( "title", value )
+    def Title( value: Node* ) = J( "title", value: _* )
 }
